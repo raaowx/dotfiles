@@ -6,6 +6,10 @@ This repository have been created for store and backup all configurations of my 
 
 The folder contains all my configurations for [Bash](https://www.gnu.org/software/bash/) shell. In those files you will find all my environment variables, aliases, functions, etc.  
 
+## iTerm2
+
+The folder contains my configuration for [iTerm2](https://iterm2.com) terminal and the profile I use.  
+
 ## Nano
 
 The folder contains my configuration for [Nano](https://www.nano-editor.org/) editor.  
