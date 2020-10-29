@@ -14,6 +14,10 @@ The folder contains my configuration for [Nano](https://www.nano-editor.org/) ed
 
 The folder contains my configuration for [Visual Studio Code](https://code.visualstudio.com) editor and the list of extensions I use. Yeah! I know VSCode can handle [settings sync](https://code.visualstudio.com/docs/editor/settings-sync) for me, but I don't like the way it's done. I prefer to have all configurations in the same repository.  
 
+## XCode
+
+The folder contains my favourite themes for [Xcode](https://developer.apple.com/xcode/) editor.  
+
 ## Licensing
 
 All configuration files are under the same [license](./LICENSE.txt).  
