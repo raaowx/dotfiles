@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repository have been created for store and backup all configurations of my development tools. All files have been created thinking only in my workflows. I make it public because I want to share it, if you find something useful, feel free to copy it.  
+This repository has been created for store and backup all configurations of my development tools. All files has been created thinking only in my workflows. I make it public because I want to share it, if you find something useful, feel free to copy it.  
 
 ## Bash
 
