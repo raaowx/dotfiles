@@ -13,7 +13,7 @@ alias grep='grep --color=always'
 # J
 # K
 # L
-alias ll='ls -ahlOp'
+alias ll='ls -ahlOp'  # All || Human readeable || List long format || Include Unix file flag || Write '/' at the end if is directory
 # M
 # N
 alias neofetch='neofetch --config "$HOME/.neofetch"'

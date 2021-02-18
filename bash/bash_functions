@@ -52,7 +52,7 @@ hosts() {
 # L
 lanconfig() {
   for ip in $(ifconfig | grep inet\ | cut -f 2 -d \ ); do
-    echo -e "$WB LAN IP:$YB $ip$RESET" # !FIXME: For some reason '$YB' doesn't apply for '$ip'
+    echo -e "$WB LAN IP:$YB ${ip:3} $RESET" # * For some reason $ip contains at the begining the char '[m', so we need parameter expansion to get rid of it and apply $YB color.
   done
 }
 # M
@@ -77,7 +77,6 @@ reloadbash() {
 repoinfo() {
   git rev-parse --show-toplevel > /dev/null 2>&1
   if [ $? -eq 0 ]; then
-    clear
     echo -e "$WB ··> Name:$YB $(basename $(pwd))$RESET"
     echo -e "$WB ··> Branch:$YB $(gitbranch)$RESET"
     echo -e "$WB ··> Current changes:$RESET"

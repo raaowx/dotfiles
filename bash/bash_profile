@@ -59,82 +59,84 @@ export PATH="$PATH:$PYENV_ROOT"
 echo -e "\n $CB ··> Hi $USER! Welcome to $(basename $SHELL) $BASH_VERSINFO <·· $RESET\n"
 
 # === LOAD FILES === #
+echo -e "$CB Sourcing completion: $RESET"
+
 # LOAD BASH COMPLETION
 BASH_COMPLETION="/usr/local/share/bash-completion/bash_completion"
 if [ -f $BASH_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB bash $RESET"
+	echo -e "$CB   ··>$MB bash $RESET"
 	. $BASH_COMPLETION # This loads bash completion
 fi
 
 # LOAD GIT COMPLETION
 GIT_COMPLETION="/usr/local/etc/bash_completion.d/git-completion.bash"
 if [ -f $GIT_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB git $RESET"
+	echo -e "$CB   ··>$MB git $RESET"
 	. $GIT_COMPLETION # This loads git completion
 fi
 
 # LOAD BREW COMPLETION
 BREW_COMPLETION="/usr/local/etc/bash_completion.d/brew"
 if [ -f $BREW_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB brew $RESET"
+	echo -e "$CB   ··>$MB brew $RESET"
 	. $BREW_COMPLETION # This loads brew completion
 fi
 
 # LOAD BREW SERVICES COMPLETION
 BREW_SERVICES_COMPLETION="/usr/local/etc/bash_completion.d/brew-services"
 if [ -f $BREW_SERVICES_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB brew-services $RESET"
+	echo -e "$CB   ··>$MB brew-services $RESET"
 	. $BREW_SERVICES_COMPLETION # This loads brew-services completion
-fi
-
-# LOAD NVM COMPLETION
-NVM_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-if [ -f $NVM_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB nvm $RESET"
-  . $NVM_COMPLETION  # This loads nvm completion
 fi
 
 # LOAD DOCKER COMPLETION
 DOCKER_COMPLETION="/usr/local/etc/bash_completion.d/docker"
 if [ -f $DOCKER_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB docker $RESET"
+	echo -e "$CB   ··>$MB docker $RESET"
   . $DOCKER_COMPLETION # This loads docker completion
 fi
 
 # LOAD DOCKER COMPOSE COMPLETION
 DOCKER_COMPOSE_COMPLETION="/usr/local/etc/bash_completion.d/docker-compose"
 if [ -f $DOCKER_COMPOSE_COMPLETION ]; then
-	echo -e "$CB Loading completion:$MB docker-compose $RESET"
+	echo -e "$CB   ··>$MB docker-compose $RESET"
   . $DOCKER_COMPOSE_COMPLETION # This loads docker-compose completion
 fi
 
-echo
+# LOAD NVM COMPLETION
+NVM_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+if [ -f $NVM_COMPLETION ]; then
+	echo -e "$CB   ··>$MB nvm $RESET"
+  . $NVM_COMPLETION  # This loads nvm completion
+fi
+
+echo -e "\n$CB Sourcing scripts: $RESET"
 
 # LOAD BASH FILES
 if [ -f "$HOME/.bash_aliases" ]; then
-	echo -e "$CB Loading:$MB aliases $RESET"
+	echo -e "$CB   ··>$MB aliases $RESET"
 	. "$HOME/.bash_aliases"
 fi
 
 if [ -f "$HOME/.bash_functions" ]; then
-	echo -e "$CB Loading:$MB functions $RESET"
+	echo -e "$CB   ··>$MB functions $RESET"
 	. "$HOME/.bash_functions"
 fi
 
 if [ -f "$HOME/.bash_job" ]; then
-	echo -e "$CB Loading:$MB job $RESET"
+	echo -e "$CB   ··>$MB job $RESET"
 	. "$HOME/.bash_job"
 fi
 
 # LOAD NVM
 if [ -f "/usr/local/opt/nvm/nvm.sh" ]; then
-	echo -e "$CB Loading:$MB nvm $RESET"
+	echo -e "$CB   ··>$MB nvm $RESET"
   . "/usr/local/opt/nvm/nvm.sh"
 fi
 
 # LOAD PYENV
 if command -v pyenv 1> /dev/null 2>&1; then
-	echo -e "$CB Loading:$MB pyenv $RESET"
+	echo -e "$CB   ··>$MB pyenv $RESET"
 	eval "$(pyenv init -)"
 fi
 
