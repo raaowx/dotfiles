@@ -52,7 +52,7 @@ hosts() {
 # L
 lanconfig() {
   for ip in $(ifconfig | grep inet\ | cut -f 2 -d \ ); do
-    echo -e "$WB LAN IP:$YB ${ip:3} $RESET" # * For some reason $ip contains at the begining the char '[m', so we need parameter expansion to get rid of it and apply $YB color.
+    echo -e "$WB LAN IP:$YB $ip $RESET"
   done
 }
 # M
