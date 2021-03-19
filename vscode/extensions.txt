@@ -6,8 +6,11 @@ dbaeumer.vscode-eslint
 dnicolson.binary-plist
 DotJoshJohnson.xml
 eamodio.gitlens
+esbenp.prettier-vscode
 foxundermoon.shell-format
 Gruntfuggly.todo-tree
+mkxml.vscode-filesize
+ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 Remisa.shellman
 smockle.xcode-default-theme
