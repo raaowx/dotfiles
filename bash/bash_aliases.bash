@@ -3,6 +3,7 @@
 # A
 # B
 # C
+alias cleanup-brew='brew cleanup --prune=all -s'
 # D
 # E
 # F

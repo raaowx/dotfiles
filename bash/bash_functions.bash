@@ -3,6 +3,10 @@
 # A
 # B
 # C
+cleanup-history() {
+  echo -n >"$HOME/.bash_history"
+  history -c
+}
 # D
 dos2nix() {
   FILE=$(basename "$1")
@@ -28,10 +32,6 @@ gitignore() {
   curl --connect-timeout 10 -f -s -L toptal.com/developers/gitignore/api/$PARAM -o .gitignore
 }
 # H
-historycleanup() {
-  echo -n > "$HOME/.bash_history"
-  history -c
-}
 hosts() {
   HOSTS="/etc/hosts"
   which bat &> /dev/null
