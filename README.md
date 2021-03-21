@@ -2,10 +2,6 @@
 
 This repository has been created for store and backup all configurations of my development tools. All files has been created thinking only in my workflows. I make it public because I want to share it, if you find something useful, feel free to copy it.  
 
-## Bash
-
-The folder contains all my configurations for [Bash](https://www.gnu.org/software/bash/) shell. In those files you will find all my environment variables, aliases, functions, etc.  
-
 ## iTerm2
 
 The folder contains my configuration for [iTerm2](https://iterm2.com) terminal and the profile I use.  
@@ -18,6 +14,18 @@ The folder contains my configuration for [Nano](https://www.nano-editor.org/) ed
 
 The folder contains my configuration for [Neofetch](https://github.com/dylanaraps/neofetch) script.  
 
+## Shell
+
+The folder contains all common configurations for the shell interpreters I usually use. In those files you will find all my environment variables, aliases, functions, etc. Also contains subfolders for specific configurations of the interpreters.  
+
+### Bash
+
+The folder contains all my configurations for [Bash](https://www.gnu.org/software/bash/) shell.  
+
+### Zsh
+
+The folder contains all my configurations for [Zsh](https://www.zsh.org) shell.  
+
 ## Terminal
 
 The folder contains the profile I use in the built-in MacOS Terminal.  
@@ -29,10 +37,6 @@ The folder contains my configuration for [Visual Studio Code](https://code.visua
 ## XCode
 
 The folder contains my favourite themes for [Xcode](https://developer.apple.com/xcode/) editor.  
-
-## Zsh
-
-The folder contains all my configurations for [Zsh](https://www.zsh.org) shell. In those files you will find all my environment variables, aliases, functions, etc.  
 
 ## Licensing
 

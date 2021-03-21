@@ -1,10 +1,17 @@
-# === === === ZSH FUNCTIONS === === === #
+# === === === SHELL FUNCTIONS === === === #
 # A
 # B
 # C
 cleanup-history() {
-  echo -n >"$HOME/.zsh_history"
-  history -c
+  case "${INTERPRETER}" in
+    "bash")
+      echo -n >"$HOME/.bash_history"
+      history -c
+    ;;
+    "zsh")
+      echo -n >"$HOME/.zsh_history"
+    ;;
+  esac
 }
 # D
 dos2nix() {
@@ -69,9 +76,16 @@ nix2dos() {
 # P
 # Q
 # R
-reloadzsh() {
+reload-shell() {
   clear
-  source "$HOME/.zsh_profile"
+  case "${INTERPRETER}" in
+    "bash")
+      source "$HOME/.bash_profile"
+    ;;
+    "zsh")
+      source "$HOME/.zsh_profile"
+    ;;
+  esac
 }
 repoinfo() {
   git rev-parse --show-toplevel > /dev/null 2>&1
