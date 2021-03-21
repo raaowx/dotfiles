@@ -1,5 +1,4 @@
-# === BASH FUNCTIONS === #
-
+# === === === BASH FUNCTIONS === === === #
 # A
 # B
 # C

@@ -1,5 +1,4 @@
-# === BASH ALIASES === #
-
+# === === === BASH ALIASES === === === #
 # A
 # B
 # C
@@ -14,7 +13,13 @@ alias grep='grep --color=auto'
 # J
 # K
 # L
-alias ll='ls -ahlOp'  # All || Human readeable || List long format || Include Unix file flag || Write '/' at the end if is directory
+## Alias 'll' description
+#     a = All files including hidden
+#     h = Human readeable file/folder size
+#     l = Long list format
+#     O = Inlcude Unix file flags
+#     p = Write '/' at the end of folders name
+alias ll='ls -ahlOp'
 # M
 # N
 alias neofetch='neofetch --config "$HOME/.neofetch"'

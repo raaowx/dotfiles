@@ -1,6 +1,7 @@
-# === BASH PROFILE === #
+# === === === BASH PROFILE === === === #
 
 # === VARIABLES  === #
+NEWLINE='\n'
 B=$(tput setaf 0); BB=$(tput setaf 8)  # BLACK
 R=$(tput setaf 1); RB=$(tput setaf 9)  # RED
 G=$(tput setaf 2); GB=$(tput setaf 10) # GREEN
@@ -11,12 +12,11 @@ C=$(tput setaf 6); CB=$(tput setaf 14) # CYAN
 W=$(tput setaf 7); WB=$(tput setaf 15) # WHITE
 RESET=$(tput sgr0)                     # RESET
 
-# === EXPORT === #
-# PROMPT_COMMAND
-export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+# === CONFIGURATION === #
 # PROMPT
 export PS1='\[$W\][\D{%a %d.%m.%Y} - \t] ~ \[$Y\]\!\[$W\] ~ \[$RB\]#\#\n\[$WB\]··> \h { \j } <·· \[$W\][\[$CB\]\u\[$W\]] \[$MB\]\W\[$RESET\] \[$B\]$(gitbranch)\[$RESET\]\$ '
 export PS2='\[$R\]··>\[$RESET\] '
+export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 # STDOUT
 export CLICOLOR=1
 export LSCOLORS=GxFxAxExBxdxDxBxBxGxGx
@@ -40,10 +40,14 @@ export HISTFILESIZE=999999 # Number of lines in file
 export HISTCONTROL='ignoreboth' # Ignores repeated command & commands starting with a space
 # EDITOR
 export EDITOR=nano
+# LESS
+export LESSHISTFILE="-"
 # APPS
 export APPS_ROOT="$HOME/.apps"
 # SCRIPTS
 export SCRIPT_ROOT="$HOME/.scripts"
+# COMPLETIONS
+export COMPLETIONS_DIR="$HOME/.completions"
 # NVM
 export NVM_DIR="$HOME/.nvm"
 # PYENV
@@ -59,58 +63,59 @@ export PATH="$PATH:$PYENV_ROOT"
 echo -e "\n $CB ··> Hi $USER! Welcome to $(basename $SHELL) $BASH_VERSINFO <·· $RESET\n"
 
 # === LOAD FILES === #
-echo -e "$CB Sourcing completion: $RESET"
+echo -e "$CB Loading completion: $RESET"
 
 # LOAD BASH COMPLETION
 BASH_COMPLETION="/usr/local/share/bash-completion/bash_completion"
 if [ -f $BASH_COMPLETION ]; then
 	echo -e "$CB   ··>$MB bash $RESET"
-	. $BASH_COMPLETION # This loads bash completion
+	. $BASH_COMPLETION
 fi
 
 # LOAD GIT COMPLETION
-GIT_COMPLETION="/usr/local/etc/bash_completion.d/git-completion.bash"
+GIT_COMPLETION="$COMPLETIONS_DIR/git-completion.bash"
 if [ -f $GIT_COMPLETION ]; then
 	echo -e "$CB   ··>$MB git $RESET"
-	. $GIT_COMPLETION # This loads git completion
+	. $GIT_COMPLETION
 fi
 
 # LOAD BREW COMPLETION
 BREW_COMPLETION="/usr/local/etc/bash_completion.d/brew"
 if [ -f $BREW_COMPLETION ]; then
 	echo -e "$CB   ··>$MB brew $RESET"
-	. $BREW_COMPLETION # This loads brew completion
+	. $BREW_COMPLETION
 fi
 
 # LOAD BREW SERVICES COMPLETION
 BREW_SERVICES_COMPLETION="/usr/local/etc/bash_completion.d/brew-services"
 if [ -f $BREW_SERVICES_COMPLETION ]; then
 	echo -e "$CB   ··>$MB brew-services $RESET"
-	. $BREW_SERVICES_COMPLETION # This loads brew-services completion
+	. $BREW_SERVICES_COMPLETION
 fi
 
 # LOAD DOCKER COMPLETION
-DOCKER_COMPLETION="/usr/local/etc/bash_completion.d/docker"
+DOCKER_COMPLETION="$COMPLETIONS_DIR/docker.bash"
 if [ -f $DOCKER_COMPLETION ]; then
 	echo -e "$CB   ··>$MB docker $RESET"
-  . $DOCKER_COMPLETION # This loads docker completion
+  . $DOCKER_COMPLETION
 fi
 
 # LOAD DOCKER COMPOSE COMPLETION
-DOCKER_COMPOSE_COMPLETION="/usr/local/etc/bash_completion.d/docker-compose"
+DOCKER_COMPOSE_COMPLETION="$COMPLETIONS_DIR/docker-compose.bash"
 if [ -f $DOCKER_COMPOSE_COMPLETION ]; then
 	echo -e "$CB   ··>$MB docker-compose $RESET"
-  . $DOCKER_COMPOSE_COMPLETION # This loads docker-compose completion
+  . $DOCKER_COMPOSE_COMPLETION
 fi
 
 # LOAD NVM COMPLETION
 NVM_COMPLETION="/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 if [ -f $NVM_COMPLETION ]; then
 	echo -e "$CB   ··>$MB nvm $RESET"
-  . $NVM_COMPLETION  # This loads nvm completion
+  . $NVM_COMPLETION
 fi
 
-echo -e "\n$CB Sourcing scripts: $RESET"
+echo -e $NEWLINE
+echo -e "$CB Loading scripts: $RESET"
 
 # LOAD BASH FILES
 if [ -f "$HOME/.bash_aliases" ]; then
