@@ -30,6 +30,10 @@ The folder contains my configuration for [Visual Studio Code](https://code.visua
 
 The folder contains my favourite themes for [Xcode](https://developer.apple.com/xcode/) editor.  
 
+## Zsh
+
+The folder contains all my configurations for [Zsh](https://www.zsh.org) shell. In those files you will find all my environment variables, aliases, functions, etc.  
+
 ## Licensing
 
 All configuration files are under the same [license](./LICENSE.txt).  
