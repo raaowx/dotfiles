@@ -45,7 +45,7 @@
     "zenMode.hideTabs": false,
     "todo-tree.tree.showScanModeButton": false,
     "editor.minimap.enabled": true,
-    "workbench.iconTheme": "vs-minimal",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.editor.showIcons": false,
     "update.showReleaseNotes": false,
     "explorer.confirmDragAndDrop": false,

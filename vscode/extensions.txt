@@ -16,4 +16,5 @@ Remisa.shellman
 smockle.xcode-default-theme
 tomoki1207.pdf
 usernamehw.errorlens
+vscode-icons-team.vscode-icons
 yzhang.markdown-all-in-one
