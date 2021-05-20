@@ -61,5 +61,8 @@
     "editor.minimap.scale": 2,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.suggest.maxVisibleSuggestions": 15,
-    "editor.formatOnSaveMode": "modifications"
+    "editor.formatOnSaveMode": "modifications",
+    "files.associations": {
+        "*.shell": "shellscript"
+    }
 }
