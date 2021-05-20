@@ -3,6 +3,7 @@
 # B
 # C
 alias cleanup-brew='brew cleanup --prune=all -s'
+alias cleanup-hosts='echo -n > "$HOME/.ssh/known_hosts"'
 # D
 # E
 # F
