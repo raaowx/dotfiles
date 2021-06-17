@@ -74,5 +74,8 @@
         "[ ]",
         "[x]"
     ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "cSpell.enabled": true,
+    "cSpell.language": "es,en,en-GB,en-US,es-ES",
+    "window.zoomLevel": 0.5
 }
