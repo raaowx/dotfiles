@@ -2,6 +2,22 @@
 
 This repository has been created for store and backup all configurations of my development tools. All files has been created thinking only in my workflows. I make it public because I want to share it, if you find something useful, feel free to copy it.  
 
+**Table of Contents:**
+
+- [Dotfiles](#dotfiles)
+  - [iTerm2](#iterm2)
+  - [Nano](#nano)
+  - [Neofetch](#neofetch)
+  - [Shell](#shell)
+    - [Bash](#bash)
+    - [Zsh](#zsh)
+  - [Terminal](#terminal)
+  - [VSCode](#vscode)
+  - [XCode](#xcode)
+  - [License & Copyright](#license--copyright)
+
+---
+
 ## iTerm2
 
 The folder contains my configuration for [iTerm2](https://iterm2.com) terminal and the profile I use.  
@@ -38,8 +54,8 @@ The folder contains my configuration for [Visual Studio Code](https://code.visua
 
 The folder contains my favourite themes for [Xcode](https://developer.apple.com/xcode/) editor.  
 
-## Licensing
+## License & Copyright
 
-All configuration files are under the same [license](./LICENSE.txt).  
+All configuration files are under the same [MIT License](./LICENSE.txt).  
 
-Copyright © 2020 **Álvaro López de Diego** [raaowx@protonmail.com]
+Copyright © 2020 **Álvaro López de Diego {raaowx}** <raaowx@protonmail.com>
